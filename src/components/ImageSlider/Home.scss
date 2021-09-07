@@ -1,0 +1,73 @@
+// @import "../../globalStyle.scss";
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  font-weight: 800;
+  background-size: 100% 100%;
+  position: relative;
+  transition: all 3s ease-in-out;
+  color: #bdf1bd;
+  animation: backwards;
+  min-height: 640px;
+
+  .arrow {
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+    animation: arrowBlink 4s infinite;
+    @keyframes arrowBlink {
+      50%{
+          opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+   
+
+    &.left {
+      left: 30px;
+      transform: rotateY(180deg);
+    }
+
+    &.right {
+      right: 30px;
+    }
+  }
+
+  h2 {
+    font-size: 35px;
+    font-family: "Segoe UI";
+  }
+
+  h3 {
+    font-size: 30px;
+    color: rgb(36, 220, 137);
+   
+
+    a {
+      text-decoration: none;
+    }
+
+    span {
+      font-size: 30px;
+      color: rgb(214, 240, 155);
+    }
+  }
+
+  
+  @keyframes blink {
+      50%{
+          opacity: 1;
+      }
+      100%{
+          opacity: 0;
+      }
+  }
+
+  
+}
